@@ -7,7 +7,7 @@ The Food Truck API provides access to food truck data, including searching by na
 ## Frontend
 The frontend is a simple web application and mobile app that allows users to search for food trucks by name or find the nearest trucks based on their current location.
 
-You can acess the web application [here](https://coral-app-5wwc7.ondigitalocean.app/).
+You can access the web application [here](https://coral-app-5wwc7.ondigitalocean.app/).
 
 ![](readme_assets/map.png)
 ![](readme_assets/mobile1.png)

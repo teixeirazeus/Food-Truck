@@ -1,5 +1,4 @@
-# Food Truck API
-
+![banner](readme_assets/banner.png)
 ## Overview
 
 The Food Truck API provides access to food truck data, including searching by name, retrieving all food trucks, and finding the nearest trucks based on geographic location.

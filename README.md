@@ -106,3 +106,69 @@ python cli.py
 ```
 
 ![](readme_assets/example_cli.png)
+
+
+# How to Run Locally
+
+## 1. Clone the Repository
+```bash
+git clone https://github.com/teixeirazeus/Food-Truck
+```
+
+## 2. Enter the Directory
+```bash
+cd Food-Truck
+```
+
+## 3. Create a Virtual Environment
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+## 4. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+## 6. Load the Data From the CSV File
+```bash
+python trucks/data/load_food_truck_data.py
+```
+
+## 7. Run the CLI Application
+```bash
+python cli.py
+```
+
+## 8. Run the Django Application
+```bash
+python manage.py runserver
+```
+
+## The Flutter Application
+The Flutter application can be found in the `food_truck_app` directory. To run the application, you will need to have Flutter installed. You can find instructions on how to install Flutter [here](https://flutter.dev/docs/get-started/install).
+
+Install the dependencies:
+
+```bash
+flutter pub get
+```
+
+Run the application:
+
+```bash
+flutter run
+```
+
+
+# Notes from the Developer
+The project's architecture is designed with a focus on data integration and application functionality. The initial stage involves data extraction from a CSV file, followed by storing this data into a SQLite database. This choice of database demonstrates an understanding of lightweight, efficient data management systems.
+
+For the API layer, I utilized the Django REST framework. This choice reflects an emphasis on creating a robust and scalable web service, capable of handling RESTful API requests with ease.
+
+The development extends to both a web application and a mobile application, crafted using Flutter. Flutter's ability to support cross-platform development allows for a consistent and streamlined development process for both web and mobile platforms.
+
+In terms of deployment, I employed a practical approach to circumvent the continuous running of the Django server. This was achieved by integrating a mock data file that simulates API responses. Concurrently, I utilized Flutter Web's build features for the web application and deployed it on Digital Ocean. This approach showcases an understanding of efficient deployment strategies in cloud environments.
+
+The application features a distance calculation tool based on the haversine formula, utilizing the haversine package to calculate distances between geographic coordinates. This implementation, while sufficient for the project's current scale, exhibits a linear time complexity (O(n)) + sort complexity in performing proximity searches for food trucks. Recognizing this as a potential limitation, for a future proof solution I suggest considering more advanced database solutions like PostgreSQL or MongoDB for future enhancements, especially for their geospatial query capabilities.
